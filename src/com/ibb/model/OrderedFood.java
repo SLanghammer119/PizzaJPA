@@ -1,8 +1,12 @@
 package com.ibb.model;
 
 import java.io.Serializable;
+import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -10,9 +14,14 @@ import javax.persistence.Id;
  */
 @Entity
 public class OrderedFood extends Food implements Serializable {
-    @Id
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private int orderedID;
     private Integer number;
     private Double totalLine;
+    
+    @ManyToMany(targetEntity=Food.class)
+    private Set speiseliste;
 
     public OrderedFood(Integer foodNo, String name, String ingrediants, Double price) {
         super(foodNo, name, ingrediants, price);

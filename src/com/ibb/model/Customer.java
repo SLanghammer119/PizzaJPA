@@ -15,7 +15,7 @@ import javax.persistence.Table;
  * @author Stefanie Langhammer
  */
 @Entity
-
+//@Table(name="Kunde")
 public class Customer extends User implements Serializable {
   
     private String firstname;

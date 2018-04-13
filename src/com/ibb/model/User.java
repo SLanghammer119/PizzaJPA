@@ -23,8 +23,8 @@ import static org.eclipse.persistence.expressions.ExpressionOperator.Length;
  * @author Stefanie Langhammer
  */
 @Entity
-@Table(name="users")
-@Inheritance( strategy = InheritanceType.TABLE_PER_CLASS )
+@Table(name="customer")
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS )
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

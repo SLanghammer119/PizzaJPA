@@ -28,7 +28,7 @@ public class JPA {
         person.setStreet("Paulstr.");
         person.setHouseNo("12");
         person.setPostcode("94587");
-        person.setTown("Plattling");
+        person.setTown("Deggendorf");
         person.setPhone("02587");
         person.setEmail("Stefanie.Langhammer@web.de");
 //        person.setEmails(new ArrayList<>());

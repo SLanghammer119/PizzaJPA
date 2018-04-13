@@ -6,21 +6,32 @@
 package com.ibb.model;
 
 import java.io.Serializable;
+import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToMany;
 
 /**
  *
  * @author Stefanie Langhammer
  */
 @Entity
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS )
 public class Food implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer foodNo;
     private String name;
     private String ingredients;
     private Double price;
-
+    
+//    @ManyToMany(targetEntity=OrderedFood.class)
+//    private Set orderedFoodlist;
+    
     public Food(Integer foodNo, String name, String ingredients, Double price) {
         this.foodNo = foodNo;
         this.name = name;
