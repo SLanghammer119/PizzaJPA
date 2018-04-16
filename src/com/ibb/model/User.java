@@ -33,6 +33,16 @@ public class User implements Serializable {
     private String email;
     @Basic(optional=false)
     private String password;
+    @Basic (optional=false)
+    private String groups;
+
+    
+    public User(String email, String password, String groups) {
+        this.email = email;
+        this.password = password;
+        this.groups = groups;
+    }
+
 
     public User(String email, String password) {
         this.email = email;
@@ -70,6 +80,14 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public String getGroups() {
+        return groups;
+    }
+
+    public void setGroups(String groups) {
+        this.groups = groups;
     }
 
 }

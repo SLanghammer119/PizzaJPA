@@ -4,7 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.ibb.model.Customer</class>
     <class>com.ibb.model.Food</class>
-    <class>com.ibb.model.OrderedFood</class>
+    <class>com.ibb.model.OrderTotal</class>
+    <class>com.ibb.model.OrderedItem</class>
     <class>com.ibb.model.User</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pizza_jpa?zeroDateTimeBehavior=convertToNull"/>

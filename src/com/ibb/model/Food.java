@@ -29,9 +29,6 @@ public class Food implements Serializable {
     private String ingredients;
     private Double price;
     
-//    @ManyToMany(targetEntity=OrderedFood.class)
-//    private Set orderedFoodlist;
-    
     public Food(Integer foodNo, String name, String ingredients, Double price) {
         this.foodNo = foodNo;
         this.name = name;
